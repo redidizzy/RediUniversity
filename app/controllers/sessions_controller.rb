@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  skip_before_action :require_user, except: [ :destroy ]
+
   def new 
   end
 
