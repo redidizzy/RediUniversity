@@ -5,8 +5,10 @@
         <p>Email: <%= student.email %> </p>
         <p>Course enrollments: None</p>
       </div>
-      <div class="card-action">
-        <a href="#">View profile</a>
-      </div>
+      <% unless request.path == student_path(student) %>
+        <div class="card-action">
+          <%= link_to "View profile", student %>
+        </div>
+      <% end %>
     </div>
   </div>
