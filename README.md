@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple university app i've made using Ruby on Rails by following this course :  https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course 
 
-Things you may want to cover:
+A very simple CRUD app made with Rails 5 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+link : https://redi-university.herokuapp.com
