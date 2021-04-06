@@ -1,18 +1,8 @@
 <ul id="dropdown1" class="dropdown-content">
-  <% if logged_in? %>
-    <li><%= link_to "Logout", logout_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to "Login", login_path %></li>
-    <li><%= link_to "Sign up", new_student_path %> </li>
-  <% end %>
+  <%= render 'layouts/account_navigation' %>
 </ul>
 <ul id="dropdown2" class="dropdown-content">
-  <% if logged_in? %>
-    <li><%= link_to "Logout", logout_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to "Login", login_path %></li>
-    <li><%= link_to "Sign up", new_student_path %> </li>
-  <% end %>
+  <%= render 'layouts/account_navigation' %>
 </ul>
 <nav>
   <div class="container">
@@ -23,7 +13,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to 'Courses', root_path %></li>
         <% if logged_in? %>
-          <li><% link_to "Students", students_path %></li>
+          <li><%= link_to "Students", students_path %></li>
         <% end %>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
@@ -33,7 +23,7 @@
 <ul class="sidenav" id="mobile-demo">
     <li><%= link_to 'Courses', root_path %></li>
     <% if logged_in? %>
-      <li><% link_to "Students", students_path %></li>
+      <li><%= link_to "Students", students_path %></li>
     <% end %>
     <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
   </ul>

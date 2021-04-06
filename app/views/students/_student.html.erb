@@ -3,7 +3,17 @@
       <div class="card-content white-text">
         <span class="card-title">Name: <%= student.name %> </span>
         <p>Email: <%= student.email %> </p>
-        <p>Course enrollments: None</p>
+        <p>Course enrollments: 
+          <% if student.courses.empty? %>
+            None
+          <% else %>
+            <ul>
+              <% student.courses.each do |course| %>
+                <li> <%= course.name %> </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </p>
       </div>
       <% unless request.path == student_path(student) %>
         <div class="card-action">
