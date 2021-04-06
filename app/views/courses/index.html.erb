@@ -6,8 +6,12 @@
 
 <% if logged_in? %>
   <%= link_to "<i class='material-icons left'>add</i>Add new course".html_safe, courses_new_path, class: " btn-large waves-effect waves-light green" %>
+  <small>(for demo purposes only)</small>
 <% end %>
-<small>(for demo purposes only)</small>
 <div class="row">
-  <%= render @courses %>  
+  <% if @courses.any? %>
+    <%= render @courses %>
+  <% else %>
+    <p>There currently is no course available, please <%= link_to "log in", login_path %> or <%= link_to "sign up", new_student_path %> to add a course </p>
+  <% end %>  
 </div>
