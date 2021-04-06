@@ -4,11 +4,15 @@
         <span class="card-title"><%= course.short_name %>: <%= course.name %> </span>
         <p><%= course.description %></p>
       </div>
-      <div class="card-action">
+      <div class="card-action overflow-hidden">
         <% if logged_in? and !current_user.courses.include?(course) %>
           <%= link_to "Enroll", course_enroll_path(course), method: :post %>
+        <% else %>
+          <span class="new badge">Already enrolled</span>
         <% end %>
-        <a href="#">More infos</a>
+        <% if request.path != course_path(course) %>
+          <%= link_to "More infos", course %>
+        <% end %>
       </div>
     </div>
   </div>

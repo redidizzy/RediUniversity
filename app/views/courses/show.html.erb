@@ -1,0 +1,15 @@
+<%= render @course %>
+
+<% unless @course.students.empty? %>
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>Students enrolled in this course</h4></li>
+    <% @course.students.each do |student| %>
+      <li class="collection-item">
+        <div>
+          <%= student.email %>
+          <%= link_to '<i class="material-icons small">pageview</i>'.html_safe, student, class: "secondary-content" %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

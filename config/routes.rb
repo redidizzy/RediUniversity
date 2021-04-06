@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post 'courses/:id/enroll', to: 'student_courses#create', as: 'course_enroll'
   get 'courses/new', to: 'courses#new'
   post 'courses', to: 'courses#create'
+  get 'courses/:id', to: 'courses#show', as: 'course'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
