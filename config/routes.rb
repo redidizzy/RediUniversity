@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   
   resources :students, except: [ :destroy ]
 
-  get 'courses/new', to: 'courses#new'
   get 'about', to: 'pages#about'
   
   get 'login', to: 'sessions#new'
@@ -11,6 +10,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   post 'courses/:id/enroll', to: 'student_courses#create', as: 'course_enroll'
+  get 'courses/new', to: 'courses#new'
+  post 'courses', to: 'courses#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
