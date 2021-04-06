@@ -1,4 +1,4 @@
-<div class="col s6 m6">
+<div class="col s12 m6">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
         <span class="card-title"><%= course.short_name %>: <%= course.name %> </span>
@@ -8,7 +8,7 @@
         <% if logged_in? and !current_user.courses.include?(course) %>
           <%= link_to "Enroll", course_enroll_path(course), method: :post %>
         <% else %>
-          <span class="new badge">Already enrolled</span>
+          <span class="new badge" data-badge-caption="">Already enrolled</span>
         <% end %>
         <% if request.path != course_path(course) %>
           <%= link_to "More infos", course %>

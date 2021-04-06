@@ -6,8 +6,13 @@ body {
   flex-direction: column;
 }
 
+header {
+  margin-bottom: 20px;
+}
+
 main {
   flex: 1 0 auto;
+  margin-bottom: 20px !important;
 }
 
 .sign-up-form{
@@ -16,4 +21,10 @@ main {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+nav .brand-logo {
+  @media screen and (max-width: 768px){
+    font-size: 1.5rem;
+  }
 }

@@ -13,12 +13,11 @@
 //= require rails-ujs
 //= require jquery
 //= require materialize
-//= require turbolinks
 //= require_tree .
 
-
-$(document).on('turbolinks:load', function(){
+$(function(){
   $(".dropdown-trigger").dropdown();
   $('.sidenav').sidenav();
+  console.log("hello")
   $(".fade-out-target").delay(5000).fadeOut();
 })
