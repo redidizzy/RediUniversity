@@ -24,6 +24,19 @@ class CoursesController < ApplicationController
   def show 
   end
 
+  def edit 
+  end
+
+  def update 
+    if @course.update(course_params)
+      flash[:notice] = "You have update the course successfully"
+      redirect_to @course
+    else
+      render 'edit'
+    end
+
+  end
+
   private 
 
   def course_params

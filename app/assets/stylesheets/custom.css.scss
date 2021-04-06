@@ -23,6 +23,12 @@ main {
   overflow: hidden;
 }
 
+.card-action a {
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
 nav .brand-logo {
   @media screen and (max-width: 768px){
     font-size: 1.5rem;

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'courses/new', to: 'courses#new'
   post 'courses', to: 'courses#create'
   get 'courses/:id', to: 'courses#show', as: 'course'
+  get 'courses/:id/edit', to: 'courses#edit', as: 'edit_course'
+  match 'courses/:id', via: [:put, :patch], to: 'courses#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

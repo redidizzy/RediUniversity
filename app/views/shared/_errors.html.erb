@@ -5,7 +5,7 @@
         <div class="card-panel red lighten-2">
           <span class="white-text">
             <strong><%= pluralize(obj.errors.count, 'error') %></strong>
-            prohibited your profile from being created
+            prohibited your form from getting submitted
             <ul>
               <% obj.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
